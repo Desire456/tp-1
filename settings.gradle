@@ -1,0 +1,8 @@
+rootProject.name = 'tp-1'
+
+include 'tp1-lib'
+include 'tp1-core'
+
+rootProject.children.each {
+    p1 -> p1.buildFileName = "${p1.name}.gradle"
+}
