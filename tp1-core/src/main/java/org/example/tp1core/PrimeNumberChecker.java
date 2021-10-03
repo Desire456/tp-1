@@ -4,14 +4,12 @@ public class PrimeNumberChecker {
     private PrimeNumberChecker() {}
 
     public static boolean isPrime(int number) {
-        if (number < 1) {
+        if (number < 2) {
             return false;
         }
-        if (number == 1) {
-            return true;
-        }
 
-        for (int i = 2; i <= number / 2 ; i++) {
+        double sqrtOfNumber = Math.sqrt(number);
+        for (int i = 2; i <= sqrtOfNumber; i++) {
             if ((number % i) == 0) {
                 return false;
             }
